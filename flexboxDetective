@@ -1,3 +1,11 @@
+/*
+ * FlexboxDetective v1.0 
+ * https://github.com/dmmikkel/FlexboxDetective
+ * 
+ * Copyright (c) 2013, Dag Martin Mikkelsen
+ * Licensed under the MIT license.
+ */
+
 window.onload = function() {
     var h = document.body.parentNode;
     var e = document.createElement("div");
