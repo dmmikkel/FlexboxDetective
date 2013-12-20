@@ -26,4 +26,8 @@ window.onload = function() {
     // Test for flex-wrap property
     if ("flexWrap" in document.body.style || "WebkitFlexWrap" in document.body.style)
         htmlEl.className += " flex-wrap";
+
+    // Test for order property
+    if ("order" in document.body.style || "WebkitOrder" in document.body.style)
+        htmlEl.className += " order";
 }
