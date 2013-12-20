@@ -7,18 +7,23 @@
  */
 
 window.onload = function() {
-    var h = document.body.parentNode;
-    var e = document.createElement("div");
+    var htmlEl = document.body.parentNode;
+    var testEl = document.createElement("div");
 
-    e.style.display = "flex";
-    if (e.style.display === "flex") {
-        h.className += " flexbox";
+    // Test for display: flex
+    testEl.style.display = "flex";
+    if (testEl.style.display === "flex") {
+        // Prepend a space if other classes already exist on html-element
+        if (htmlEl.className.length > 0) htmlEl.className += " "
+        htmlEl.className += "flexbox";
     }
     else {
-        e.style.display = "-webkit-flex";
-        if (e.style.display === "-webkit-flex")
-            h.className += " flexbox";
+        testEl.style.display = "-webkit-flex";
+        if (testEl.style.display === "-webkit-flex")
+            htmlEl.className += " flexbox";
     }
+
+    // Test for flex-wrap property
     if ("flexWrap" in document.body.style || "WebkitFlexWrap" in document.body.style)
-        h.className += " flex-wrap";
+        htmlEl.className += " flex-wrap";
 }
